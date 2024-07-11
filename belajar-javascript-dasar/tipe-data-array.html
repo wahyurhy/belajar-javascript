@@ -12,11 +12,36 @@
       let arrayNama = ["Wahyu" + "Rahayu"];
 
       const names = [];
-      names.push('Wahyu');
-      names.push('Rahayu', 'Tampan');
-      names.push('Budi', 'Joko', 'Rudi');
+      names.push("Wahyu");
+      names.push("Rahayu", "Tampan");
+      names.push("Budi", "Joko", "Rudi");
 
       console.table(names);
+
+      console.info(names[0]);
+      console.info(names[1]);
+      console.info(names[2]);
+      console.info(names[3]);
+
+      names[0] = "Programmer";
+      names[1] = "Jago";
+      names[2] = "dan Handal";
+      console.table(names);
+
+      delete names[3];
+
+      console.table(names);
+
+      names.push("Wahyu lagi");
+      console.table(names);
+
+      names[3] = "Dirubah lagi";
+      console.table(names);
+      
+      names.push(1, 2, 3, 4, 5);
+      names.push(["Wahyu", "Tetap", "Berjuang"]);
+      console.table(names);
+      
     </script>
   </body>
 </html>
