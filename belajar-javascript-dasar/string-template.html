@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      const name = "Wahyu Rahayu";
+      const firstName = "Wahyu";
+      const lastName = "Rahayu";
+
+      const template = `Nama: ${firstName} ${lastName}`;
+      const lama = "Nama: " + firstName + " " + lastName;
+
+      console.info(template);
+      console.info(lama);
+
+      const nilai = 80;
+      const template2 = `Nama: ${name}, Lulus: ${nilai > 70}`;
+
+      console.info(template2);
+
+      const multiline = `
+      Halo saya Wahyu
+      kalau soal bahasa jepang, saya sih
+      JAGONYA!`;
+
+      document.writeln('<pre>');
+      document.writeln(multiline);
+      document.writeln('</pre>');
+    </script>
+  </body>
+</html>
