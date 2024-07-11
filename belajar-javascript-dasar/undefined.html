@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+<body>
+    <script>
+        let name = "Wahyu";
+        if (name === undefined) {
+            console.info("UNDEFINED");
+        } else {
+            console.info("DEFINED");
+        }
+
+        const names = ["Wahyu", "Rahayu"];
+        delete names[0];
+
+        if (names[0] === undefined) {           // undefined, karena sudah di delete names[0]
+            console.info("ARRAY UNDEFINED");
+        } else {
+            console.info("ARRAY DEFINED");
+        }
+
+        const person = {
+            name: "Wahyu Rahayu"
+        };
+
+        if (person.alamat === undefined) {      // undefined person.alamat, kalau defined yang person.name
+            console.info("OBJECT UNDEFINED");
+        } else {
+            console.info("OBJECT DEFINED");
+        }
+    </script>
+</body>
+</html>
