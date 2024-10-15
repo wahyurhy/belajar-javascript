@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESModule Example</title>
+</head>
+<body>
+    <h1>Check the console for output</h1>
+
+    <script type="module">
+        // import { greet, appName } from './app.js';
+        import * as app from './app.js';
+        import { square } from './utility.js';
+
+        console.log(app.greet('Wahyu'));
+        console.log(`Welcome to ${app.appName}`);
+        console.log(`The square of 5 is ${square(5)}`);
+    </script>
+
+    <script nomodule>
+        console.log("Your browser does not support ESModule.");
+    </script>
+</body>
+</html>
