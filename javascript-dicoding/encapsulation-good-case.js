@@ -14,7 +14,7 @@ class CoffeMachine {
         return this.#temperature;
     }
 
-    #defualtTemperature() {
+    #defaultTemperature() {
         return 90;
     }
 }
