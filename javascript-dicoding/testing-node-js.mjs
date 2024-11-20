@@ -28,3 +28,16 @@ test('should throw an error if string passed on numA parameter', () => {
     // Assert
     assert.throws(potentialErrorToBeThrew, Error);
 });
+
+test('should throw an error if string passed on numB parameter', () => {
+    const potentialErrorToBeThrew = () => {
+        // Arrange
+        const operandA = 10;
+        const operandB = '8';
+
+        // Action
+        add(operandA, operandB);
+    };
+
+    assert.throws(potentialErrorToBeThrew, Error);
+});
