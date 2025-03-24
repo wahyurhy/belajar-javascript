@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of</title>
+</head>
+<body>
+    <script>
+        const names = ['Wahyu', 'Rahayu', 'Nur', 'Salim'];
+
+        for (const name of names) {
+            document.writeln(`<p>${name}</p>`);
+        }
+
+        const text = 'Belajar Javascript Dasar';
+        for (const character of text) {
+            document.writeln(`<p>${character}</p>`);
+        }
+
+        const person = {
+            firstName: "Wahyu",
+            middleName: undefined,
+            lastName: "Rahayu"
+        };
+
+        for (const property of Object.keys(person)) {
+            document.writeln(`<p>${property}: ${person[property] ?? 'Tidak ada'}</p>`);
+        }
+    </script>
+</body>
+</html>
