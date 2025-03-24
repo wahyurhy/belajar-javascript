@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: 'Wahyu',
+            middleName: undefined,
+            lastName: 'Rahayu'
+        };
+
+        const firstName = person.firstName;
+        const middleName = person.middleName ?? "";
+        const lastName = person.lastName ?? "";
+
+        // document.writeln(firstName + " " + middleName + " " + lastName);
+
+        with(person) {
+            document.writeln(firstName + " " + middleName + " " + lastName);
+        }
+
+    </script>
+</body>
+</html>
