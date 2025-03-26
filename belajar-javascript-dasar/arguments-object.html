@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments Object</title>
+</head>
+<body>
+    <script>
+        function oldSum() {
+            let total = 0;
+            for (const value of arguments) {
+                total += value;
+            }
+            document.writeln(`<p>Total is ${total}</p>`);
+        }
+
+        oldSum(1, 2, 3, 4, 5);
+        oldSum(10, 20, 30, 40, 50);
+        oldSum(100, 200, 300, 400, 500);
+    </script>
+</body>
+</html>

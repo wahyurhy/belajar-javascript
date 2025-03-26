@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Parameter</title>
+</head>
+<body>
+    <script>
+        function sayHello(firstName, middleName, lastName) {
+            if (typeof middleName === 'undefined') {
+                middleName = '';
+            }
+
+            if (typeof lastName === 'undefined') {
+                lastName = '';
+            }
+
+            document.writeln(`Hello ${firstName} ${middleName} ${lastName}`);
+        }
+
+        sayHello('Maudy', 'Ayunda');
+    </script>
+</body>
+</html>
