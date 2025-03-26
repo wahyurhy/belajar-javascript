@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>
+
+        function* createNames() {
+            yield 'Eko';
+            yield 'Kurniawan';
+            yield 'Khannedy';
+        }
+
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    yield i;
+                }
+            }
+        }
+
+        function* createNumbers() {
+            let number = 1;
+            while (true) {
+                yield number;
+                number++;
+            }
+        }
+
+        function* createFibonacci() {
+            let previous = 0;
+            let current = 1;
+            while (true) {
+                yield current;
+                let next = current + previous;
+                previous = current;
+                current = next;
+            }
+        }
+
+        function* createCounter() {
+            let count = 1;
+            while (true) {
+                yield count;
+                count++;
+            }
+        }
+
+        function* createFibonacciWithLimit(limit) {
+            let previous = 0;
+            let current = 1;
+            let count = 0;
+            while (count < limit) {
+                yield current;
+                let next = current + previous;
+                previous = current;
+                current = next;
+                count++;
+            }
+        }
+
+        const names = createNames();
+        for (const name of names) {
+            document.writeln(name + '<br>');
+            
+        }
+
+        const numbers = buatGanjil(10);
+        for (const number of numbers) {
+            document.writeln(number + '<br>');
+        }
+
+        const fibonacci = createFibonacci();
+        for (let i = 0; i < 10; i++) {
+            document.writeln(fibonacci.next().value + '<br>');
+        }
+
+        const counter = createCounter();
+        for (let i = 0; i < 10; i++) {
+            document.writeln(counter.next().value + '<br>');
+        }
+
+        const fibonacciWithLimit = createFibonacciWithLimit(10);
+        for (const number of fibonacciWithLimit) {
+            document.writeln(number + '<br>');
+        }
+
+    </script>
+</body>
+</html>
