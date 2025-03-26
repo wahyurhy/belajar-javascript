@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // Global Scope
+        let counter = 0;
+
+        function hitme() {
+            // Local Scope
+            counter++;
+        }
+
+        hitme();
+        hitme();
+
+        document.writeln(counter);
+
+        function first() {
+            // Local Scope
+            let firstVariable = "First";
+
+            function firstNested() {
+                // Local Scope
+                document.writeln(firstVariable);
+                const firstNestedVariable = "First Nested";
+            }
+
+            firstNested();
+            document.writeln(firstNestedVariable); // ReferenceError: firstNestedVariable is not defined
+        }
+
+        function second() {
+            // Local Scope
+            let secondVariable = "Second";
+        }
+
+        // global scope
+        document.writeln(firstVariable); // ReferenceError: firstVariable is not defined
+        document.writeln(secondVariable); // ReferenceError: secondVariable is not defined
+    </script>
+</body>
+</html>
